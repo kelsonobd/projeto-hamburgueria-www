@@ -17,14 +17,13 @@ const AdminLogin = () => {
                         <Input className="w-[]"
                             type="email" placeholder="Email" />
                     </div>
-                       <div className="flex flex-col">
+                    <div className="flex flex-col">
                         <TypographyH2 className="text-[20px]">Insira a senha</TypographyH2>
                         <Input className=""
                             type="password" placeholder="Senha" />
                     </div>
                 </div>
             </Container>
-
 
         </>
     )
