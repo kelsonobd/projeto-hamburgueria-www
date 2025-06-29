@@ -1,0 +1,65 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Garante que todos os elementos usem border-box */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove margens e paddings padrão */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Define altura total da tela e largura */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+/* 4. Melhora legibilidade */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+/* 5. Remove bullets e margens em listas */
+ul, ol {
+  list-style: none;
+}
+
+/* 6. Remove sublinhado de links por padrão */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 7. Define imagens como responsivas */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 8. Input e button sem estilos nativos */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* 9. Remove estilos padrão de botão */
+button {
+  cursor: pointer;
+}
+
+/* 10. Tailwind já reseta muita coisa, mas isso completa */
