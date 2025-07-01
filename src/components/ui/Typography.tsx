@@ -3,9 +3,8 @@ import { cn } from "@/lib/utils"
 
 // Título H1
 export function TypographyH1({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
-  return <h1 className={cn("scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl", className)} {...props} />
+  return <h1 className={cn("scroll-m-20 font-extrabold tracking-tight", className)} {...props} />;
 }
-
 // Título H2
 export function TypographyH2({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
   return <h2 className={cn("scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0", className)} {...props} />
