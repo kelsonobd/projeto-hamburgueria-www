@@ -1,6 +1,9 @@
 import Container from "@/components/ui/Container"
 import { Input, } from "@/components/ui/input";
-import { TypographyH1, TypographyH2, TypographyH3, TypographySmall } from "@/components/ui/Typography"
+import { TypographyH1, TypographyH2 } from "@/components/ui/Typography"
+import { useMutation } from "@apollo/client";
+import { LOGIN_MUTATION } from "@/graphql/mutations/login";
+import { useNavigate } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -11,8 +14,28 @@ const AdminLogin = () => {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
 
-    const handleLogin = () => {
-        console.log("Tentando logar com", email, senha)
+    const navigate = useNavigate();
+    const [fazerLogin, { loading, error }] = useMutation(LOGIN_MUTATION)
+
+    const handleLogin = async () => {
+        try {
+            const { data } = await fazerLogin({
+                variables: {
+                    email,
+                    senha
+                },
+            });
+
+            const token = data.login.token
+
+            localStorage.setItem("token", token);
+
+            navigate("/painel");
+        } catch(err){
+            console.log("Erro no login", err);
+            alert("Email ou senha inválidos")
+        }
+       
     }
 
     return (

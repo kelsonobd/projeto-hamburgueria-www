@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
 import Dashboard from "../pages/Admin/Dashboard";
 import AdicionarHamburguer from "../pages/Admin/AdicionarHamburguer";
-import AdminHome from "../pages/Admin/AdminHome";
 import AdminLogin from "@/pages/Admin/AdminLogin";
+import PainelAdminHome from "../pages/Admin/PainelAdminHome";
 
 const AppRoutes = () => {
   return (
@@ -11,8 +11,7 @@ const AppRoutes = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin" element={<AdminHome />} />
-        <Route path="/admin" element={<Dashboard />} />
+        <Route path="/admin" element={<PainelAdminHome />} />
         <Route path="/admin/adicionar" element={<AdicionarHamburguer />} />
       </Routes>
     </BrowserRouter>
