@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
-import Dashboard from "../pages/Admin/Dashboard";
-import AdicionarHamburguer from "../pages/Admin/AdicionarHamburguer";
+import CadastrarProduto from "@/pages/Admin/CadastrarProduto";
 import AdminLogin from "@/pages/Admin/AdminLogin";
 import PainelAdminHome from "../pages/Admin/PainelAdminHome";
 
@@ -12,7 +11,7 @@ const AppRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin" element={<PainelAdminHome />} />
-        <Route path="/admin/adicionar" element={<AdicionarHamburguer />} />
+        <Route path="/admin/cadastro" element={<CadastrarProduto />} />
       </Routes>
     </BrowserRouter>
   );

@@ -30,7 +30,7 @@ const AdminLogin = () => {
 
             localStorage.setItem("token", token);
 
-            navigate("/painel");
+            navigate("/");
         } catch(err){
             console.log("Erro no login", err);
             alert("Email ou senha inválidos")
